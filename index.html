@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrifty Explorers | Discover City Adventures</title>
+
+     <!-- CSS (local) -->
+    <link rel="stylesheet" href="style.css">
+     <!-- Tailwind stays on CDN since you don’t have a local Tailwind build -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+<script src="components/footer.js"></script>
+<script src="script.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'holiday-blue': '#A7C7E7',
+              'holiday-peach': '#FFD8BE',
+              'holiday-mint': '#C1E1C1',
+              'holiday-lavender': '#C3B1E1',
+              'holiday-coral': '#FAA0A0'
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-holiday-blue min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative h-96 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-holiday-peach/80 to-holiday-lavender/80 z-10 flex items-center justify-center">
+                <div class="text-center px-4">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Discover Durban Adventures</h1>
+                    <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Uncover hidden gems and must-see spots in your city with our curated travel guides</p>
+                    <a href="#explore" class="bg-white text-holiday-blue px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">Explore Now</a>
+                </div>
+            </div>
+            <img src="images/city.jpg" alt="City skyline" class="w-full h-full object-cover">
+        </section>
+
+        <!-- Featured Articles -->
+        <section id="explore" class="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Featured City Guides</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/food.jpg" alt="Local cuisine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-holiday-coral">FOOD & DRINK</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">10 Must-Try Local Eateries</h3>
+                        <p class="text-gray-600 mb-4">Discover the flavors that define our city's culinary scene from hidden gems driven by Durbans multiculural influences to iconic institutions.</p>
+                        <a href="#" class="text-holiday-blue font-medium flex items-center">
+                            Read More <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/sippaint.jpg" alt="Cultural experience" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-holiday-mint">CULTURE</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Art Walk: The Creative Heartbeat</h3>
+                        <p class="text-gray-600 mb-4">A curated guide to galleries, street art, and creative spaces that fuel the city's artistic soul.</p>
+                        <a href="#" class="text-holiday-blue font-medium flex items-center">
+                            Read More <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="images/outside.jpg" alt="Outdoor activities" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-holiday-lavender">OUTDOORS</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Urban Oasis: Parks & Green Spaces</h3>
+                        <p class="text-gray-600 mb-4">Escape the concrete jungle with our guide to the city's most serene parks and outdoor retreats.</p>
+                        <a href="#" class="text-holiday-blue font-medium flex items-center">
+                            Read More <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-16 px-4 bg-holiday-peach">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get Weekly Travel Inspiration</h2>
+                <p class="text-gray-700 mb-8 max-w-2xl mx-auto">Join our community of urban explorers and receive fresh city guides directly to your inbox.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full focus:outline-none">
+                    <button type="submit" class="bg-holiday-coral text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
